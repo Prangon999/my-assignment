@@ -26,9 +26,15 @@
     <!-- daisy ui setup  -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      .font-family{
+        font-family: "Manrope", sans-serif;
+      }
+    </style>
     
 </head>
-<body>
+<body class="font-family">
     <!-- header section  -->
      <header class="max-w-screen-xl mx-auto">
   <!-- navbar section  -->
@@ -54,13 +60,16 @@
       
       <!-- trial  -->
        <!-- first magnifying button  -->
-      <button class="bg-slate-200 p-2 mx-3 rounded-full "><i class="fa-solid fa-magnifying-glass"></i></button>
+      <button class="bg-slate-200 p-2 mx-3 rounded-full hidden sm:block"><i class="fa-solid fa-magnifying-glass"></i></button>
 <!-- shopping button  -->
-      <button class="bg-slate-200 p-2 mx-3 rounded-full "><i class="fa-solid fa-cart-shopping bg-slate-1 00"></i></button>
+      <button class="bg-slate-200 p-2 mx-3 rounded-full hidden sm:block "><i class="fa-solid fa-cart-shopping bg-slate-1 00"></i></button>
       <!-- book consult button  -->
-    <button class="bg-lime-300 p-2 rounded-3xl "> <a class="font-extrabold text-xl ">Book Consult</a> 
+    <button class="bg-lime-300 p-2 rounded-3xl hidden sm:block"> <a class="font-extrabold text-xl ">Book Consult</a> 
       <i class="fa-solid fa-arrow-right bg-slate-800 text-white rounded-full  -rotate-45 p-[2px]"></i>
-    </button> 
+    </button>
+   <div class=" md:hidden block"> <button class="bg-zinc-100 p-2 mx-3 rounded-full ">
+    <i class="fa-solid fa-bars"></i>
+  </button> </div>
    </div>
   </nav>
   <!-- banner part  -->
@@ -84,27 +93,28 @@
     <!-- main section  -->
     <main>
         <!-- liveable spaces  -->
-        <section class="mb-10">
+        <section class="mb-10 bg-base-200">
            
-          <div class="hero bg-base-200  lg:min-h-fit ">
+          <div class="max-w-screen-xl mx-auto  p-10  lg:min-h-fit ">
            
             <!-- image content -->
-            <div class="hero-content flex-col-reverse lg:flex-row-reverse ">
-              
+            <div class="flex gap-4 flex-col-reverse  lg:flex-row-reverse ">
+              <div class="">
                 <img
                 src="assets/Rectangle.png"
-                class="max-w-sm rounded-lg  shadow-2xl"/>
-              
+                class="max-w-full h-full rounded-lg  shadow-2xl"/>
+              </div>
                 <!-- text content  -->
-              <div class="border border-red-500">
-                <div class="border border-red-500 w-1/4  lg:-ml-20 mb-5">
+              <div class="">
+                <!--text first image  -->
+                <div class=" w-1/4 hidden lg:block  lg:-ml-20  mb-5">
                   <img class="" src="assets/Vector.png" alt="">
                 </div>
                 <div class="mx-auto w-1/4 lg:mx-0">
-                  <button class="rounded-2xl bg-white px-2 py-1 "><i class="fa-solid fa-arrow-right"></i>About Us</button>
+                  <button class="rounded-2xl bg-white px-5 py-1 "> <i class="fa-solid fa-arrow-right"></i>About Us</button>
                 </div>
-                <h1 class="text-5xl font-bold">We design thoughtful, liveable spaces</h1>
-                <p class="py-6 ">
+                <h1 class="text-5xl font-bold sm:text-center md:text-left">We design thoughtful, liveable spaces</h1>
+                <p class="py-6 sm:text-center md:text-left">
                   The barn house captivates with its blend of rustic charm and 
       modern sophistication, <br> featuring weathered wood, sleek metal accents.
                 </p>
@@ -167,36 +177,37 @@
 
           <!-- our latest portfolio  -->
            <section>
-           <div class="max-w-screen-xl mx-auto  border border-red-500 md:px-32 py-24 ">
-            <div class=" mx-auto">
+           <div class="max-w-screen-xl mx-auto   md:px-32 py-24 ">
+            <div class="">
               <!-- button  -->
-                <div class=" mx-auto text-center my-4 lg:w-1/4 "><button class="font-bold bg-lime-100 ml-30 py-2 px-1 rounded-xl  lg:py-2 lg:px-1"><i class="fa-solid fa-arrow-right"></i>Explore our Latest works</button>
+                <div class=" mx-auto  text-center my-4 lg:w-1/4 "><button class="font-bold bg-lime-100 ml-30 py-2 px-1 rounded-xl  lg:py-2 lg:px-2"><i class="fa-solid fa-arrow-right"></i>Explore our Latest works</button>
                 </div>
                 <!-- button end  -->
-                <h2 class="font-extrabold text-4xl text-center mb-4">Our Latest Portfolio</h2>
-                <p class="font-medium text-base text-center">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents.</p>
+                <h2 class="font-extrabold text-4xl text-center mb-4 ">Our Latest Portfolio</h2>
+                <p class="font-medium text-base text-center mb-3">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents.</p>
                 </div>
-                <!-- grid portion  -->
+   <!-- grid portion  -->
             
-            <div class="grid grid-rows-5 grid-cols-12 gap-3 p-3 border border-red-500 md:grid-cols-12 md:grid-rows-2 ">
+            <div class="grid grid-rows-5 grid-cols-12 gap-3 p-3 h-[230] md:grid-cols-12 md:grid-rows-2 ">
               <!-- first div  -->
                <div class="flex flex-col col-span-12 p-6 bg-slate-100 rounded-xl text-center md:col-span-8 md:flex-row ">
-                <div class="mx-auto"> <img src="assets/img1.png" alt=""></div>
+                <div class="mx-auto  "> <img class="h-vh max-sm:w-full" src="assets/img1.png" alt=""></div>
                 <!-- content  -->
-                <div class="md:w-1/2 mx-auto">
-                  <h2 class="font-extrabold text-2xl">Commercial</h2>
-                  <p class="font-medium text-base">The barn house captivates with its blend of rustic charm and modern. The barn house captivates with its blend of rustic charm and modern .</p>
+                <div class="md:w-1/2 mx-auto ">
+                  <h2 class="font-extrabold text-2xl md:ml-0">Commercial</h2>
+                  <p class="font-medium text-base md:mx-0">The barn house captivates with its blend of rustic charm and modern. The barn house captivates with its blend of rustic charm and modern .</p>
                  <div class="flex items-center "> <p class="text-xl font-extrabold mx-auto md:mx-0 ">View Details<i class="fa-solid fa-arrow-right bg-green-400 p-2 ml-2 rounded-full"></i></p>
                 </div>
                 </div>
                </div>
                <!-- second div  -->
-               <div class="border border-yellow-500  rounded-xl h-auto   bg-slate-200 p-6 col-span-12  md:col-span-4 "><img src="assets/img2.png" alt="" class="mx-auto" ></div>
+               <div class="  rounded-xl   bg-slate-200 col-span-12 p-4 h-[190] max-sm:w-full md:col-span-4 md:p-6"><img class=" "src="assets/img2.png" alt="" class="mx-auto" ></div>
+               
                <!-- third div  -->
-               <div class="border border-yellow-500 rounded-xl  bg-slate-200 p-6 col-span-12  md:col-span-2 "><img src="assets/img3.png" alt="" class=" mx-auto" ></div>
+               <div class=" rounded-xl  bg-slate-200 p-6 col-span-12  md:col-span-2 "><img class="max-h-full" src="assets/img3.png" alt="" class=" mx-auto" ></div>
                <!-- fourth div  -->
                <div class="flex flex-col col-span-12 p-6 bg-slate-100 rounded-xl md:col-span-8 md:flex-row ">
-                <div class="mr-3 mx-auto "> <img src="assets/img4.png" alt=""></div>
+                <div class="mr-3 mx-auto "> <img class="h-100%"src="assets/img4.png" alt=""></div>
                  <!-- content  -->
                  <div class="md:w-1/2 mx-auto">
                    <h2 class="font-extrabold text-2xl">Commercial</h2>
@@ -205,7 +216,7 @@
                  </div>
                 </div>
                <!-- fifth div  -->
-               <div class="border border-yellow-500 rounded-xl  bg-slate-200 p-6 col-span-12  md:col-span-2 "><img src="assets/img5.png" alt="" class="mx-auto" ></div>
+               <div class=" rounded-xl  bg-slate-200 p-6 col-span-12  md:col-span-2 "><img class="h-100%" src="assets/img5.png" alt="" class="mx-auto" ></div>
             </div>
            </div>
            
